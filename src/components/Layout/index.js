@@ -6,16 +6,19 @@
  */
 
 import React from "react"
-import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../Header"
+import Status from "../Status"
+import SEO from "../../utils/seo"
 
 // Global styles and component-specific styles.
-import "./global.css"
 import styles from "./main.module.css"
+import Emoji from "../../utils/emoji"
 
-const Layout = ({ children }) => {
+const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,10 +33,14 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log("hi")
+
   return (
     <>
-      <Helmet title="Matt was here with his Helmet" />
+      {/* <Helmet title="e-hoops.com" /> */}
+      <SEO title={pageTitle} />
       <Header siteTitle={data.site.siteMetadata.title} menuLinks={data.site.siteMetadata.menuLinks} />
+      <Status />
       <div
         style={{
           margin: `0 auto`,
@@ -43,13 +50,17 @@ const Layout = ({ children }) => {
       >
         <main className={styles.main}>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()} <Link to="/about">{data.site.siteMetadata.title}</Link>, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <Emoji symbol="⛹️‍♀️⛹️‍♂️" label="hustle" />
         </footer>
       </div>
     </>
   )
+}
+
+Layout.propTypes = {
+  pageTitle: PropTypes.string.isRequired,
 }
 
 export default Layout

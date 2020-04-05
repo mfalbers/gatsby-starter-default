@@ -2,15 +2,16 @@ import React from "react"
 import { Link, navigate } from "@reach/router"
 import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
 import styles from "./status.module.css"
+import Emoji from "../../utils/emoji"
 
 export default () => {
   let details
   if (!isLoggedIn()) {
     details = (
       <p className={styles[`status__text`]}>
-        To get the full app experience, you’ll need to
+        <Emoji symbol="🎟" label="Log In"/>
         {` `}
-        <Link to="/app/login">log in</Link>.
+        <Link to="/app/login">Log In</Link>.
       </p>
     )
   } else {
@@ -18,8 +19,7 @@ export default () => {
 
     details = (
       <p className={styles[`status__text`]}>
-        Logged in as {name} ({email}
-        )!
+        {name} ({email})
         {` `}
         <a
           href="/"
@@ -28,7 +28,7 @@ export default () => {
             logout(() => navigate(`/app/login`))
           }}
         >
-          log out
+        <Emoji symbol="🔌" label="Log Out"/>log out
         </a>
       </p>
     )

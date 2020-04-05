@@ -2,15 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import styles from "./view.module.css"
 
-const View = ({ title, children }) => (
+const View = ({ heading, children }) => (
   <section className={styles.view}>
-    <h1 className={styles[`view__heading`]}>{title}</h1>
+    <h2 className={styles[`view__heading`]}>{heading}</h2>
     {children}
   </section>
 )
 
 View.propTypes = {
-  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
 }
 
 export default View

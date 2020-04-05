@@ -1,23 +1,19 @@
 import React from "react"
 import { Router } from "@reach/router"
 import Layout from "../components/Layout"
-import Profile from "../components/Profile"
-// import Details from "../components/Details"
+import ProfileView from "../components/ProfileView"
 import Login from "../components/Login"
-// import Default from "../components/Default"
 import PrivateRoute from "../components/privateroute"
-import Status from "../components/Status"
+import HomeView from "../components/HomeView"
 
 const App = () => {
   return (
-    <Layout>
-        <Status />
+    <Layout pageTitle="Home">
         <Router basepath="/app">
             {/* <PrivateRoute path="/dashboard" component={Dashboard} />   */}
-            {/* <PrivateRoute path="/details" component={Details} /> */}
-            <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/profile" component={ProfileView} />
             <Login path="/login" />
-            {/* <Default path="/" /> */}
+            <HomeView path="/" />
         </Router>
     </Layout>
   )

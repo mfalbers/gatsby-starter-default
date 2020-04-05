@@ -1,5 +1,5 @@
 .header {
-    background-color: rebeccapurple;
+    background-color: darkorange;
   }
   
   .header__wrap {
@@ -40,5 +40,5 @@
   .header__link:active,
   .header__link:focus {
     background: white;
-    color: rebeccapurple;
+    color: darkorange;
   }

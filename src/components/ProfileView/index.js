@@ -2,11 +2,11 @@ import React from "react"
 import View from "../View"
 import { getCurrentUser } from "../../utils/auth"
 
-const Profile = () => {
+const ProfileView = () => {
   const { name, legalName, email } = getCurrentUser()
 
   return (
-    <View title="Your Profile">
+    <View heading="Head Coach's Office">
       <p>Welcome back {name}!</p>
       <p>
         DEV NOTE: This is a client-only route. You could set up a form to save information
@@ -21,4 +21,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileView

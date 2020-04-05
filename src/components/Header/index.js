@@ -4,42 +4,29 @@ import React from "react"
 import styles from "./header.module.css"
 
 const Header = ({ siteTitle, menuLinks }) => (
-  <header
-    style={{
-      background: `darkorange`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <header className={styles.header}>
+    <div className={styles[`header__wrap`]}>
+      <h1 className={styles[`header__heading`]}>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+          className={`${styles[`header__link`]} ${
+            styles[`header__link--home`]
+          }`}
         >
           {siteTitle}
         </Link>
       </h1>
       <div>
-          <nav>
+          <nav role="main" className={styles[`header__nav`]}>
             <ul style={{ display: "flex", flex: 1 }}>
               {menuLinks.map(link => (
                 <li
                   key={link.name}
                   style={{
-                    listStyleType: `none`,
-                    padding: `1rem`,
+                    listStyleType: `none`
                   }}
                 >
-                  <Link style={{ color: `white` }} to={link.link}>
+                  <Link to={link.link} className={styles[`header__link`]}>
                     {link.name}
                   </Link>
                 </li>
