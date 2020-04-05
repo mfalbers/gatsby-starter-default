@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `🏀e-hoops.com`,
     description: `e-hoops is an online basketball simulator, where users can create teams and simulate games with real stats`,
+    keywords: `basketball simulator, e-hoops, ehoops, NBA stats game`,
     author: `@mattalbers`,
+    siteUrl: `https://e-hoops.com/`,
     menuLinks:[
       {
         name:'home',

@@ -33,23 +33,14 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
 
-  console.log("hi")
-
   return (
     <>
-      {/* <Helmet title="e-hoops.com" /> */}
       <SEO title={pageTitle} />
       <Header siteTitle={data.site.siteMetadata.title} menuLinks={data.site.siteMetadata.menuLinks} />
       <Status />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className={styles.site}>
         <main className={styles.main}>{children}</main>
-        <footer>
+        <footer className={styles.footer}>
           © {new Date().getFullYear()} <Link to="/about">{data.site.siteMetadata.title}</Link>, Built with
           {` `}
           <Emoji symbol="⛹️‍♀️⛹️‍♂️" label="hustle" />

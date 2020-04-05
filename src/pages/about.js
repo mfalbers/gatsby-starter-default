@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/Layout"
-import Image from "../components/image"
+import Image from "../utils/image"
 import View from "../components/View"
 import mainGIF from '../images/ehoops_logo.gif'
 
