@@ -15,8 +15,8 @@ module.exports = {
         link:'/about'
       },
       {
-        name:'profile',
-        link:'/app/profile'
+        name:'game',
+        link:'/app/locker-room'
       }
     ]
   },

@@ -18,7 +18,7 @@ export default () => {
       </div>
     )
   } else {
-    const { name, email } = getCurrentUser()
+    const { name, username } = getCurrentUser()
 
     details = (
       <div className={styles.status}>
@@ -28,8 +28,8 @@ export default () => {
           <Link to="/app/profile">Coach's Office</Link>
         </p>
         <p className={styles[`status__text`]}>
-          <strong>Coach {name}</strong> ({email})
-          {` `}
+          <strong>Coach {name}</strong> (<Link to="/app/profile">{username}</Link>)
+          {`  |  `}
           <a
             href="/"
             onClick={event => {

@@ -1,22 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
 import View from "../View"
 import { getCurrentUser } from "../../utils/auth"
 
 const ProfileView = () => {
-  const { name, legalName, email } = getCurrentUser()
+  const { name, username, email } = getCurrentUser()
 
   return (
     <View heading="Head Coach's Office">
       <p>Welcome back Coach {name}!</p>
-      <p>
-        DEV NOTE: This is a client-only route. You could set up a form to save information
-        about a user here.
-      </p>
+      <p>Here's the current info we have for your profile.</p>
       <ul>
-        <li>Preferred name: {name}</li>
-        <li>Legal name: {legalName}</li>
-        <li>Email address: {email}</li>
+        <li>Preferred Name: <code>{name}</code></li>
+        <li>Username: <code>{username}</code></li>
+        <li>Email address: <code>{email}</code></li>
       </ul>
     </View>
   )
