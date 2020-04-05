@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import View from "../View"
 import { getCurrentUser } from "../../utils/auth"
 
-const ProfileView = () => {
+const LockerRoomView = () => {
   const { name, legalName, email } = getCurrentUser()
 
   return (
-    <View heading="Head Coach's Office">
-      <p>Welcome back Coach {name}!</p>
+    <View heading="Locker Room">
+      <p>{name}'s Team</p>
       <p>
         DEV NOTE: This is a client-only route. You could set up a form to save information
         about a user here.
@@ -22,4 +22,4 @@ const ProfileView = () => {
   )
 }
 
-export default ProfileView
+export default LockerRoomView

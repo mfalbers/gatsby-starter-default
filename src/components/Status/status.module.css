@@ -2,10 +2,23 @@
     background: orange;
     font-size: 87.5%;
     padding: 0.25rem;
+    /* margin: 0 auto;
+    max-width: 640px; */
   }
-  
+
+  .game__nav {
+    margin: 0 auto;
+    max-width: 640px;
+    padding-left: 10%;
+    text-align: left;
+    display:inline-block;
+  }
+
   .status__text {
     margin: 0 auto;
     max-width: 640px;
+    padding-right: 10%;
     text-align: right;
+    display:block;
+    float:right;
   }

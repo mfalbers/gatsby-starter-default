@@ -8,31 +8,41 @@ export default () => {
   let details
   if (!isLoggedIn()) {
     details = (
-      <p className={styles[`status__text`]}>
-        <Emoji symbol="🎟" label="Log In"/>
-        {` `}
-        <Link to="/app/login">Log In</Link>.
-      </p>
+      <div className={styles.status}>
+        <p className={styles[`game__nav`]}></p>
+        <p className={styles[`status__text`]}>
+          <Link to="/app/login">Head Coach Log In</Link>
+          {` `}
+          <Emoji symbol="👨🏻‍💼" label="Log In"/>
+        </p>
+      </div>
     )
   } else {
     const { name, email } = getCurrentUser()
 
     details = (
-      <p className={styles[`status__text`]}>
-        {name} ({email})
-        {` `}
-        <a
-          href="/"
-          onClick={event => {
-            event.preventDefault()
-            logout(() => navigate(`/app/login`))
-          }}
-        >
-        <Emoji symbol="🔌" label="Log Out"/>log out
-        </a>
-      </p>
+      <div className={styles.status}>
+        <p className={styles[`game__nav`]}>
+          <Link to="/app/locker-room">Locker Room</Link>
+          {` | `}
+          <Link to="/app/profile">Coach's Office</Link>
+        </p>
+        <p className={styles[`status__text`]}>
+          <strong>Coach {name}</strong> ({email})
+          {` `}
+          <a
+            href="/"
+            onClick={event => {
+              event.preventDefault()
+              logout(() => navigate(`/app/login`))
+            }}
+          >
+          log out
+          </a>{` `}<Emoji symbol="🔌" label="pull the plug"/>
+        </p>
+      </div>
     )
   }
 
-  return <div className={styles.status}>{details}</div>
+  return details
 }
