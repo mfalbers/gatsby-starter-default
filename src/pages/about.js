@@ -7,12 +7,17 @@ import mainGIF from '../images/ehoops_logo.gif'
 
 const AboutPage = () => (
   <Layout pageTitle="About">
-    <View heading="About Us">
-      <p>e-hoops is an online basketball simulator, where users can create teams and simulate games with real stats.</p>
-      <img src={mainGIF} alt="e-hoops.com coming soom" />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <View heading="About">
+      <p><strong>e-hoops.com</strong> originated as a senior project at Cal Poly, San Luis Obispo in the late 90's. It was built as an <strong>online basketball simulator</strong>, 
+        where users could create teams and simulate basketball games to analyze outcomes via box scores.
+      </p>
+      <p>The proprietery algorithms allowed for coaches to register, choose a team of <strong>real players</strong> with <strong>real stats</strong> to simulate basketball games.</p>
+      <p>The original technology used was ASP pages with a SQL Server backend.</p>
+      <p>Below is the original image once I took the site down to refactor to newer technologies. It remained this way for 20+ years. Until now!</p>
+      <div className="text-center"><img src={mainGIF} alt="e-hoops.com coming soom" align="center" /></div>
+      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
-      </div>
+      </div> */}
     </View>
   </Layout>
 )
