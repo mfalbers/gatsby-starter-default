@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         name:'game',
-        link:'/app/locker-room'
+        link:'/app/gym'
       }
     ]
   },

@@ -3,11 +3,11 @@ import View from "../View"
 import { getCurrentUser } from "../../utils/auth"
 import Table from "react-bootstrap/Table"
 
-const LockerRoomView = () => {
+const GymView = () => {
   const { name, username, email } = getCurrentUser()
 
   return (
-    <View heading="Locker Room">
+    <View heading="Gym">
       <p>{name}'s Team</p>
       <Table striped bordered hover>
         <thead>
@@ -47,4 +47,4 @@ const LockerRoomView = () => {
   )
 }
 
-export default LockerRoomView
+export default GymView

@@ -9,7 +9,7 @@ const AboutPage = () => (
   <Layout pageTitle="About">
     <View heading="About">
       <p><strong>e-hoops.com</strong> originated as a senior project at Cal Poly, San Luis Obispo in the late 90's. It was built as an <strong>online basketball simulator</strong>, 
-        where users could create teams and simulate basketball games to analyze outcomes via box scores.
+        where users could <strong>create teams</strong> and <strong>simulate basketball games</strong> to analyze outcomes via box scores.
       </p>
       <p>The proprietery algorithms allowed for coaches to register, choose a team of <strong>real players</strong> with <strong>real stats</strong> to simulate basketball games.</p>
       <p>The original technology used was ASP pages with a SQL Server backend.</p>

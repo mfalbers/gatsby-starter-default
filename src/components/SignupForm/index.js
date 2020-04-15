@@ -3,7 +3,8 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import FormTextInputField from '../FormTextInputField';
 import { isLoggedIn } from "../../utils/auth"
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import Button from 'react-bootstrap/Button';
 
 export default () => {
   let registrationForm
@@ -51,7 +52,8 @@ export default () => {
             type="text"
             placeholder="jumpman23@nike.com"
           />
-          <button type="submit" className="form__button">Register</button>{`   `}<Link to="/app/login">Log In</Link>
+          {/* <button type="submit" className="form__button">Register</button>{`   `}<Link to="/app/login">Log In</Link> */}
+          <Button variant="primary" type="submit">Register</Button>{` `}<Button variant="link" href="/app/login">Log In</Button>
         </Form>
       </Formik>
     ) 

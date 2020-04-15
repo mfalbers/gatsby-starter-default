@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./form.module.css"
 import { navigate } from "@reach/router"
+import Button from 'react-bootstrap/Button';
 
 export default ({ handleSubmit, handleUpdate }) => (
   <form
@@ -32,6 +33,7 @@ export default ({ handleSubmit, handleUpdate }) => (
         onChange={handleUpdate}
       />
     </label>
-    <input className={styles[`form__button`]} type="submit" value="Log In" />
+    {/* <input className={styles[`form__button`]} type="submit" value="Log In" /> */}
+    <Button type="submit">Log In</Button>
   </form>
 )

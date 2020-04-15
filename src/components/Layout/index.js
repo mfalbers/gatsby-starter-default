@@ -34,7 +34,9 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
+    // TODO empty tag <></> makes header across whole page
     <>
+    {/* <div className="container"> */}
       <SEO title={pageTitle} />
       <Header siteTitle={data.site.siteMetadata.title} menuLinks={data.site.siteMetadata.menuLinks} />
       <Status />
@@ -46,6 +48,7 @@ const Layout = ({ pageTitle, children }) => {
           <Emoji symbol="⛹️‍♀️⛹️‍♂️" label="hustle" />
         </footer>
       </div>
+    {/* </div> */}
     </>
   )
 }

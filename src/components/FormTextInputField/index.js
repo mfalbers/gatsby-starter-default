@@ -7,11 +7,11 @@ const FormTextInputField = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
         <>
-        <label htmlFor={props.id || props.name} className="form__label">{label}</label>
-        <input className="form__input" {...field} {...props} />
-        {meta.touched && meta.error ? (
-            <div className="form__error">{meta.error}</div>
-        ) : null}
+            <label htmlFor={props.id || props.name} className="form__label">{label}</label>
+            <input className="form__input" {...field} {...props} />
+            {meta.touched && meta.error ? (
+                <div className="form__error">{meta.error}</div>
+            ) : null}
         </>
     );
 };
