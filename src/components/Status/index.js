@@ -2,7 +2,6 @@ import React from "react"
 import { Link, navigate } from "@reach/router"
 import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
 import styles from "./status.module.css"
-import Emoji from "../../utils/emoji"
 import { GiBasketballBasket } from "react-icons/gi";
 import { FaRegClipboard } from 'react-icons/fa'
 import { GoJersey } from 'react-icons/go'
@@ -15,7 +14,7 @@ export default () => {
       <div className={styles.status}>
         <p className={styles[`game__nav`]}></p>
         <p className={styles[`status__text`]}>
-          <Link to="/app/login">Head Coach Log In <FiLogIn/></Link>
+          {/* <Link to="/app/login">Head Coach Log In <FiLogIn/></Link> */}
         </p>
       </div>
     )
@@ -32,8 +31,6 @@ export default () => {
           <FaRegClipboard/>{` `}<Link to="/app/profile">Coach's Office</Link>
         </p>
         <p className={styles[`status__text`]}>
-          <strong>Coach {name}</strong> (<Link to="/app/profile">{username}</Link>)
-          {`  |  `}
           <a
             href="/"
             onClick={event => {

@@ -23,6 +23,7 @@ export const handleLogin = ({ username, password }) => {
 }
 
 export const isLoggedIn = () => {
+  console.log(`Ensuring the \`isBrowser\` property exists.` + isBrowser)
   if (!isBrowser) return false
 
   const user = getUser()

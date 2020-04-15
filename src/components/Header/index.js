@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
+import HeaderStatus from "../HeaderStatus";
 
 const Header = ({ siteTitle, menuLinks }) => (
   // <header className={styles.header}>
@@ -53,7 +54,8 @@ const Header = ({ siteTitle, menuLinks }) => (
       <Navbar.Toggle aria-controls="navbarResponsive" />
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
-          Signed in as: <a href="/app/login">jumpman23</a>
+          {/* Signed in as: <a href="/app/login">{name}</a> */}
+          <HeaderStatus />
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
