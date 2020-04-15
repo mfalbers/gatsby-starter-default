@@ -11,6 +11,7 @@ import Alert from 'react-bootstrap/Alert'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { FiAlertCircle}  from 'react-icons/fi'
 
 const ProfileView = () => {
   const { name, username, email } = getCurrentUser()
@@ -18,7 +19,7 @@ const ProfileView = () => {
 
   return (
     <View heading={profileHeading}>
-      <Alert variant="warning"><strong>Coaching Alert!</strong> Check your trophy case. <Emoji symbol="🏆" label="Trophy"/></Alert>
+      <Alert variant="warning"><FiAlertCircle /> <strong>Coaching Alert!</strong> Check your trophy case. <Emoji symbol="🏆" label="Trophy"/></Alert>
       <Container fluid="md">
         <Row>
           <Col>

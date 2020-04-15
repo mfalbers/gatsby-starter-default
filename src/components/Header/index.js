@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./header.module.css"
-import Navbar from 'react-bootstrap/Navbar';
+import Navbar, { NavbarText } from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
@@ -53,7 +53,7 @@ const Header = ({ siteTitle, menuLinks }) => (
       <Navbar.Toggle aria-controls="navbarResponsive" />
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
-          Signed in as: <a href="/app/login">Mark Otto</a>
+          Signed in as: <a href="/app/login">jumpman23</a>
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>

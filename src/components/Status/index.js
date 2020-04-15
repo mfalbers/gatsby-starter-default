@@ -3,6 +3,10 @@ import { Link, navigate } from "@reach/router"
 import { getCurrentUser, isLoggedIn, logout } from "../../utils/auth"
 import styles from "./status.module.css"
 import Emoji from "../../utils/emoji"
+import { GiBasketballBasket } from "react-icons/gi";
+import { FaRegClipboard } from 'react-icons/fa'
+import { GoJersey } from 'react-icons/go'
+import { FiLogIn, FiLogOut } from 'react-icons/fi'
 
 export default () => {
   let details
@@ -11,9 +15,7 @@ export default () => {
       <div className={styles.status}>
         <p className={styles[`game__nav`]}></p>
         <p className={styles[`status__text`]}>
-          <Link to="/app/login">Head Coach Log In</Link>
-          {` `}
-          <Emoji symbol="👨🏻‍💼" label="Log In"/>
+          <Link to="/app/login">Head Coach Log In <FiLogIn/></Link>
         </p>
       </div>
     )
@@ -23,9 +25,11 @@ export default () => {
     details = (
       <div className={styles.status}>
         <p className={styles[`game__nav`]}>
-          <Link to="/app/locker-room">Locker Room</Link>
+        <GiBasketballBasket/>{` `}<Link to="/app/gym">Gym</Link>
           {` | `}
-          <Link to="/app/profile">Coach's Office</Link>
+          <GoJersey/>{` `}<Link to="/app/locker-room">Locker Room</Link>
+          {` | `}
+          <FaRegClipboard/>{` `}<Link to="/app/profile">Coach's Office</Link>
         </p>
         <p className={styles[`status__text`]}>
           <strong>Coach {name}</strong> (<Link to="/app/profile">{username}</Link>)
@@ -37,8 +41,8 @@ export default () => {
               logout(() => navigate(`/app/login`))
             }}
           >
-          log out
-          </a>{` `}<Emoji symbol="🔌" label="pull the plug"/>
+          log out <FiLogOut/>
+          </a>
         </p>
       </div>
     )
