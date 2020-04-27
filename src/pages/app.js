@@ -7,6 +7,8 @@ import PrivateRoute from "../components/privateroute"
 import HomeView from "../components/HomeView"
 import LockerRoomView from "../components/LockerRoomView"
 import GymView from "../components/GymView"
+import PlayerView from "../components/PlayerView"
+import FavoriteTeam from "../components/FavoriteTeam"
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
             <PrivateRoute path="/gym" component={GymView} /> 
             <PrivateRoute path="/locker-room" component={LockerRoomView} />  
             <PrivateRoute path="/profile" component={ProfileView} />
+            <PrivateRoute path="/player" component={PlayerView} />
+            <PrivateRoute path="/team-test" component={FavoriteTeam} />
             <Login path="/login" />
             <HomeView path="/" />
         </Router>
